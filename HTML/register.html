@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaCart Login</title>
-    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/reigister.css">
 </head>
 <body>
 
@@ -21,22 +21,26 @@
         </div>
     </header>
 
-    <main class="login-container">
-        <div class="login-card">
+    <main class="register-container">
+        <div class="register-card">
             
-            <div class="hero-section">
-                <div class="hero-overlay">
-                    <p class="subtitle">WELCOME BACK</p>
-                    <h1>Access your cart and continue shopping faster.</h1>
+            <div class="left-section">
+                <div class="left-overlay">
+                    <p class="subtitle">JOIN NOVACART</p>
+                    <h1>Craete an account with practical validation and secure local hashing.</h1>
                     <p class="note">Your demo account is stored locally in this browser for portfolio and learning use.</p>
                 </div>
             </div>
 
             <div class="form-section">
-                <h2>Login</h2>
-                <p class="form-instruction">Enter your registered email and password.</p>
+                <h2>Create account</h2>
+                <p class="form-instruction">Use a strong password to register.</p>
                 
                 <form>
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName"  required>
+                    </div>
                     <div class="input-group">
                         <label for="email">Email address</label>
                         <input type="email" id="email" name="email" required>
@@ -45,18 +49,23 @@
                     <div class="input-group">
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" required>
+                        <p class="input_p">Minimun 8 characters with uppercase, lowercase, number, and symbol.</p>
+                    </div>
+                    <div class="input-group">
+                        <label for="cpassword">Confirm password</label>
+                        <input type="password" id="cpassword" name="cpassword" required>
                     </div>
 
                     <div class="form-footer">
                         <label class="checkbox-container">
                             <input type="checkbox" checked>
                             <span class="checkmark"></span>
-                            Remember me
+                            I agree to the NovaCart account terms 
                         </label>
-                        <a href="register.html" class="create-link">Create account</a>
                     </div>
 
-                    <button type="submit" class="login-submit">Login</button>
+                    <button type="submit" class="register-submit">Create account</button>
+                    <p class="input_p" style="text-align: center;">Already registered? <a href="login.html" class="create-link">Login</a></p>
                 </form>
             </div>
 

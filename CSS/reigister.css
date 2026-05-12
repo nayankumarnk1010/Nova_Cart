@@ -21,9 +21,13 @@ body {
     display: flex;
     align-items: center;
 }
-.auth-buttons{
-    display: flex;
-    justify-content: right;
+.btn-login >a{
+    text-decoration: none;
+    color: #000;
+}
+.btn-register >a{
+    text-decoration: none;
+    color: white;
 }
 .logo {
     font-weight: 700;
@@ -54,25 +58,17 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-.btn-login >a{
-    text-decoration: none;
-    color: #000;
-}
-.btn-register >a{
-    text-decoration: none;
-    color: white;
-}
 
 /* Layout Container */
-.login-container {
+.register-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px);
+    /* min-height: calc(100vh - 80px); */
     padding: 20px;
 }
 
-.login-card {
+.register-card {
     display: flex;
     width: 100%;
     max-width: 1000px;
@@ -82,10 +78,10 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* Left Hero Section */
-.hero-section {
+/* Left Section */
+.left-section {
     flex: 1;
-    background: url('../nova_imgs/login.png'); 
+    background: url('../nova_imgs/register.png'); 
     box-shadow: inset black 50px 20px 300px 30px;
     background-size: cover;
     background-position: center;
@@ -93,10 +89,10 @@ body {
     min-height: 500px;
 }
 
-.hero-overlay {
+.left-overlay {
     position: absolute;
     bottom: 0;
-    padding: 40px;
+    padding: 38px;
     background: linear-gradient(transparent, rgba(0,0,0,0.8));
     color: white;
     width: 100%;
@@ -111,7 +107,7 @@ body {
     margin-bottom: 10px;
 }
 
-.hero-overlay h1 {
+.left-overlay h1 {
     font-size: 1.6rem;
     margin-bottom: 15px;
     line-height: 1.2;
@@ -126,7 +122,7 @@ body {
 /* Right Form Section */
 .form-section {
     flex: 1;
-    padding: 60px 80px;
+    padding: 60px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,7 +157,10 @@ body {
     border-radius: 6px;
     font-size: 1rem;
 }
-
+.input_p{
+    color: gray;
+    font-size:0.9em;
+}
 .form-footer {
     display: flex;
     justify-content: space-between;
@@ -175,7 +174,7 @@ body {
     text-decoration: underline;
 }
 
-.login-submit {
+.register-submit {
     width: 100%;
     background: #2d3436;
     color: white;
@@ -188,13 +187,13 @@ body {
     transition: background 0.3s;
 }
 
-.login-submit:hover {
+.register-submit:hover {
     background: #000;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .login-card {
+    .register-card {
         flex-direction: column;
     }
     .navbar {
