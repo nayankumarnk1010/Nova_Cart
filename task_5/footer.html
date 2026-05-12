@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: black;
+            height: 520px;
+
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        ul,
+        li {
+            color: aliceblue;
+        }
+
+        img {
+            width: 280px;
+            height: 80px;
+        }
+
+        .logo {
+            width: 323.5px;
+            height: 144px;
+            align-items: center;
+        }
+
+        h5 {
+            color: rgb(143, 142, 142);
+            font-size: 18px;
+            line-height: 80px;
+        }
+
+        .contact {
+            right: 0px;
+        }
+
+        li {
+            line-height: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            text-align: justify;
+        }
+        .trending {
+            margin-left: 100px;
+        }
+
+        .contact {
+            right: 0px;
+            margin-right: 0px;
+            line-height: 30px;
+            justify-content: center;
+            margin-left: auto;
+            width: 341px;
+            height: 282px;
+        }
+
+        .social {
+            line-height: 30px;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(238, 236, 236);
+        }
+
+
+        .copyright {
+            justify-content: space-evenly;
+            align-items: center;
+            column-gap: 60px;
+            display: inline-flex;
+        }
+
+        .social ul {
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+        }
+
+        .social i {
+            color: black;
+            background: white;
+            border-radius: 50%;
+            padding: 8px;
+            font-size: 20px;
+        }
+        .social i:hover {
+            color: rgb(255, 255, 255);
+            transform:rotate(360deg);
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+        }
+        .fa-youtube:hover {
+            background: red;
+        }
+        .fa-pinterest:hover {
+            background: orangered;
+        }
+        .fa-facebook:hover {
+            background: rgb(59, 89, 152);
+        }
+        .fa-instagram:hover {
+            background: rgb(66, 121, 240);
+        }
+        .fa-twitter:hover {
+            background: rgb(29, 161, 242);
+        }
+        .fa-linkedin:hover {
+            background: rgb(0, 119, 181);
+        }
+
+
+        .text-lightblue {
+            color: lightblue;
+        }
+
+        .text-orangered {
+            color: orangered;
+        }
+
+        .text-light-green {
+            color: lightgreen;
+        }
+        ul li a:hover {
+            color: rgb(245, 41, 41);
+        }
+        span a:hover {
+            color: rgb(245, 41, 41);
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <section class="footer">
+            <div class="logo">
+                <img src="../images/AIT-white.jpg" alt="logo">
+                <p style="color: rgb(143, 142, 142); font-size: 16px;font-family:sans-serif; margin: 0px 0px 16px;">
+                    AchieversIT - Provides a wide group of opportunities for freshers and Experienced candidate who can
+                    develop their skills and build their career opportunities across multiple Companies.</p>
+            </div>
+            <div style="margin-left: 70px;">
+                <ul style="list-style: circle;">
+                    <h5>COMPANY</h5>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Placements</a></li>
+                    <li><a href="#">Corporate Training</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="trending">
+                <ul style="list-style: circle;">
+                    <h5>TRENDING COURSES</h5>
+                    <li><a href="#">UI Development Course</a></li>
+                    <li><a href="#">Angular Js Course</a></li>
+                    <li><a href="#">React Js Course</a></li>
+                    <li><a href="#">Digital Marketing Course</a></li>
+                    <li><a href="#">Python Course</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <ul type="none" style="line-height: 30px;">
+                    <h5>CONTACT INFO</h5>
+                    <p><i class="fa-solid fa-location-dot" aria-hidden="true" style="margin-right: 5px;"></i> #63, 1st Floor, 16th Main, 8th
+                        Cross,BTM 1st
+                        Stage, Bangalore, India - 560029</p>
+                    <p><i class="fa-solid fa-phone" aria-hidden="true" style="margin-right: 5px;"></i> India : +91 9740225633</p>
+                    <p><i class="fa-solid fa-envelope" aria-hidden="true" style="margin-right: 5px;"></i> info@achieversit.com</p>
+                </ul>
+            </div>
+        </section>
+        <hr style="color: rgb(202, 200, 200); margin-bottom: 15px;">
+        <div class="social">
+            <ul  type="none" style="font-size: xx-large;">
+                <li><a href="#"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <section style="justify-content: center; display: flex; padding: 20px;">
+            <div class="copyright">
+                <p style="color: lightgray;">Copyright © 2026 AchieversIT. All Rights Reserved</p>
+                <ul type="none" style="display: flex; column-gap: 20px; font-size: 18px;">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+        </section>
+        <div
+            style="justify-content: center; display: flex; padding: 20px; color:white ;font-size: 22px; column-gap: 280px;">
+            <span> <i class="fas fa-phone-volume font-40  font-xs-30 font-sm-30 text-lightblue" style="margin-right: 5px;"></i><a href="#">Call us on : +91 9740225633</a></span>
+            <span> <i class="far fa-envelope font-40 font-xs-30 font-sm-30 text-orangered" style="margin-right: 5px;"></i><a href="#">Request A Call Back</a></span>
+            <span style="color:blue;"><i class="fab fa-whatsapp font-40 font-xs-30 font-sm-30  text-light-green" style="margin-right: 5px;"></i><a href="#">Chat With US!</a></span>
+        </div>
+    </footer>
+</body>
+
+</html>

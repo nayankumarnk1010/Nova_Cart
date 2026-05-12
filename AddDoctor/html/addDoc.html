@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddDoctor</title>
+    <link rel="stylesheet" href="../css/doc.css">
+</head>
+
+<body>
+    <form action="#">
+        <legend>
+            <h1>Doctor Registration Form</h1>
+        </legend>
+        <fieldset>
+            <legend>
+                <h2>Personal Information</h2>
+            </legend>
+            <label for="name"> Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your Full Name">
+            <label style="margin-left: 5%;">Gender :</label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="others">Others</label>
+            <input type="radio" id="others" name="gender" value="others" required><br><br>
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob" name="dob" required>
+            <label for="email"style="margin-left: 17.9%;">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" maxlength="10" required>
+            <label for="addImg">Add Image:</label>
+            <input type="file" id="addImg" name="addImg" accept="image/*"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                <h2>Professional Information</h2>
+            </legend>
+            <label for="specialization">Specialization:</label>
+            <select id="specialization" name="specialization" required >
+                <option value="">Select Specialization</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="dermatology">Dermatology</option>
+                <option value="neurology">Neurology</option>
+            </select>
+            <label for="qualification"style="margin-left: 5%;" >Qualification:</label>
+            <label for="MBBS">MBBS</label>
+            <input type="checkbox" id="qualification" name="qualification" value="MBBS" required>
+            <label for="MD">MD</label>
+            <input type="checkbox" id="qualification" name="qualification" value="MD" required>
+            <label for="PhD">MS</label>
+            <input type="checkbox" id="qualification" name="qualification" value="MS" required><br><br>
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" min="0" max="50" required>
+            <label for="consultation"style="margin-left: 10.5%;">Consultation Fee:</label>
+            <input type="number" id="consultation" name="consultation" min="0"><br><br>
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" required><br><br>
+        </fieldset>
+        <fieldset>
+            <legend><h2>Availability</h2></legend>
+            <label for="avldays">Available Days:</label>
+            <input type="checkbox" id="avldays" name="avldays" value="Monday">
+            <label for="avldays">Monday</label>
+            <input type="checkbox" id="avldays" name="avldays" value="Tuesday">
+            <label for="avldays">Tuesday</label>
+            <input type="checkbox" id="avldays" name="avldays" value="Wednesday">
+            <label for="avldays">Wednesday</label>
+            <input type="checkbox" id="avldays" name="avldays" value="Thursday">
+            <label for="avldays">Thursday</label>
+            <input type="checkbox" id="avldays" name="avldays" value="Friday">
+            <label for="avldays">Friday</label>
+            <input type="checkbox" id="avldays" name="avldays" value="Saturday">
+            <label for="avldays">Saturday</label>
+            <input type="checkbox" id="avldays" name="avldays" value="Sunday">
+            <label for="avldays">Sunday</label><br><br>
+            <label for="avltime">Available Time :</label>
+            <input type="time" id="avltime" name="avltime" required>
+            <label for="avltimeend">T0 :</label>
+            <input type="time" id="avltimeend" name="avltimeend" required><br><br>
+        </fieldset>
+    </form>
+</body>
+
+</html>

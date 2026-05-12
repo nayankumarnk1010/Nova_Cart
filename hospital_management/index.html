@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City General Hospital - Advanced Healthcare Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #0066cc 0%, #0099ff 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #00ff88;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: #00ff88;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,102,204,0.8), rgba(0,153,255,0.8)), url('https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #00ff88;
+            color: #0066cc;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,255,136,0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: #0066cc;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0066cc, #0099ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #f8f9fa;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: #0066cc;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Doctors Section */
+        .doctors {
+            background-color: white;
+        }
+
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .doctor-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .doctor-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .doctor-info {
+            padding: 20px;
+        }
+
+        .doctor-info h3 {
+            color: #0066cc;
+            margin-bottom: 5px;
+        }
+
+        .doctor-specialty {
+            color: #00ff88;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #0066cc 0%, #0099ff 100%);
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            width: 30px;
+            height: 30px;
+            background: #00ff88;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #0066cc;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            color: #00ff88;
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #00ff88;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav ul {
+                margin-top: 20px;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-right: 20px;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .services-grid,
+            .doctors-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">City<span>Hospital</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Advanced Healthcare for Better Tomorrow</h1>
+            <p>City General Hospital provides comprehensive medical care with state-of-the-art technology and compassionate healthcare professionals dedicated to your well-being.</p>
+            <div>
+                <a href="#contact" class="btn">Book Appointment</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-title">
+            <h2>Our Medical Services</h2>
+            <p>Comprehensive healthcare services tailored to meet your medical needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3>Emergency Care</h3>
+                <p>24/7 emergency medical services with rapid response teams and advanced life support systems.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🩺</div>
+                <h3>Cardiology</h3>
+                <p>Advanced cardiac care including diagnostics, treatment, and rehabilitation for heart conditions.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧠</div>
+                <h3>Neurology</h3>
+                <p>Comprehensive neurological care for brain and nervous system disorders with cutting-edge technology.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🦷</div>
+                <h3>Dentistry</h3>
+                <p>Complete dental care services including preventive, restorative, and cosmetic dentistry.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👶</div>
+                <h3>Pediatrics</h3>
+                <p>Specialized healthcare for infants, children, and adolescents with a child-friendly environment.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+                <h3>Laboratory</h3>
+                <p>State-of-the-art diagnostic laboratory services with accurate and timely test results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-title">
+            <h2>About City General Hospital</h2>
+            <p>Excellence in healthcare since 1995</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Committed to Your Health & Well-being</h3>
+                <p>City General Hospital has been a cornerstone of healthcare excellence in our community for over two decades. We combine cutting-edge medical technology with compassionate care to provide the best possible outcomes for our patients.</p>
+                <p>Our team of highly qualified medical professionals, supported by the latest diagnostic and treatment equipment, ensures that every patient receives personalized care tailored to their specific needs.</p>
+                <p>We are committed to maintaining the highest standards of medical care while continuously advancing our capabilities through ongoing research and professional development.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Hospital Facility">
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors">
+        <div class="section-title">
+            <h2>Meet Our Expert Doctors</h2>
+            <p>Highly qualified medical professionals dedicated to your care</p>
+        </div>
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                <div class="doctor-image" style="background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="doctor-info">
+                    <h3>Dr. Sarah Johnson</h3>
+                    <div class="doctor-specialty">Chief Cardiologist</div>
+                    <p>Over 15 years of experience in cardiovascular medicine and interventional cardiology.</p>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <div class="doctor-image" style="background-image: url('https://images.unsplash.com/photo-1594824804732-ca8db723f8fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="doctor-info">
+                    <h3>Dr. Michael Chen</h3>
+                    <div class="doctor-specialty">Neurosurgeon</div>
+                    <p>Specialist in brain and spine surgery with expertise in minimally invasive procedures.</p>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <div class="doctor-image" style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="doctor-info">
+                    <h3>Dr. Emily Rodriguez</h3>
+                    <div class="doctor-specialty">Pediatrician</div>
+                    <p>Dedicated to providing comprehensive healthcare for children from infancy through adolescence.</p>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <div class="doctor-image" style="background-image: url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="doctor-info">
+                    <h3>Dr. James Wilson</h3>
+                    <div class="doctor-specialty">Orthopedic Surgeon</div>
+                    <p>Expert in joint replacement, sports medicine, and orthopedic trauma care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for appointments and inquiries</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Visit Our Hospital</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <strong>Address:</strong><br>
+                        123 Medical Center Drive<br>
+                        Healthcare City, HC 12345
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <strong>Phone:</strong><br>
+                        Emergency: (555) 911-0000<br>
+                        Appointments: (555) 123-4567
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <strong>Email:</strong><br>
+                        info@citygeneralhospital.com
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <div>
+                        <strong>Hours:</strong><br>
+                        Emergency: 24/7<br>
+                        Clinic: Mon-Fri 8AM-8PM, Sat-Sun 9AM-5PM
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="tel" placeholder="Your Phone">
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>City General Hospital</h3>
+                <p>Providing exceptional healthcare services with compassion and excellence since 1995.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#doctors">Our Doctors</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Emergency Care</a></li>
+                    <li><a href="#">Cardiology</a></li>
+                    <li><a href="#">Neurology</a></li>
+                    <li><a href="#">Pediatrics</a></li>
+                    <li><a href="#">Laboratory</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 City General Hospital. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 102, 204, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #0066cc 0%, #0099ff 100%)';
+            }
+        });
+    </script>
+</body>
+</html>

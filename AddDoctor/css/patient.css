@@ -1,0 +1,54 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+form {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid gray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    border-radius: 15px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    padding: 6px;
+}
+.group-row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+input[type="submit"]{
+    width: 100%;
+    color: #fff;
+    border-color: gray;
+    background-color: rgb(42, 42, 249);
+    font-size: large;
+}
+@media (max-width: 440px) {
+    fieldset {
+        grid-template-columns: 1fr;
+    }
+}

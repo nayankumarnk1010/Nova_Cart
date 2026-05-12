@@ -1,0 +1,51 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+#text{
+    color: white;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    font-size: xx-large;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: xxx-large;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+.display{
+    color: white;
+    font-size: 5em;
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+hr{
+    background-color: white;
+    margin-top: 4%;
+    padding: 5px;
+}
+.guess_sec{
+    display: flex;
+    color:white;
+    font-size: 2em;
+    justify-content: space-around;
+}
+input{
+    height: 50px;
+    font-size: x-large;
+    margin-top:10px;
+}

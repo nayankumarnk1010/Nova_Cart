@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student tables</title>
+    <style>
+        tr:first-child {
+            background-color: #63a0ba;
+        }
+        tr:nth-child(even) {
+            background-color: gray;
+        }
+        td:last-child {
+            font-weight: bold;
+        }
+        td:nth-child(odd) {
+            background-color: lightgray;
+        }
+        span::before{
+            content: "Note: ";
+            font-weight: bold;
+        }
+        span::after
+        {
+            content: "End of Note.";
+            font-weight: bold;
+        }
+        #col{
+            color: sandybrown;
+        }
+        .col{
+            color: rgb(105, 102, 102);
+        }
+        table:hover{
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        span::selection{
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="10">
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Marks1</th>
+        <th>Marks2</th>
+        <th>Marks3</th>
+   </tr>
+   <tr>
+        <td>1</td>
+        <td>KumarSwamy</td>
+        <td>BCA</td>
+        <td>80</td>
+        <td>85</td>
+        <td>90</td>
+   </tr>
+   <tr>
+        <td>2</td>
+        <td>John Doe</td>
+        <td>BCA</td>
+        <td>75</td>
+        <td>80</td>
+        <td>85</td>
+   </tr>
+   <tr>
+        <td>3</td>
+        <td>Jane Smith</td>
+        <td>BCA</td>
+        <td>90</td>
+        <td>95</td>
+        <td>100</td>
+   </tr>
+   <tr>
+        <td>4</td>
+        <td>Emily Davis</td>
+        <td>BCA</td>
+        <td>85</td>
+        <td>90</td>
+        <td>95</td>
+   </tr>
+   <tr>
+        <td>5</td>
+        <td>Michael Brown</td>
+        <td>BCA</td>
+        <td>70</td>
+        <td>75</td>
+        <td>80</td>
+   </tr>
+   <tr>
+        <td>6</td>
+        <td>Sarah Wilson</td>
+        <td>BCA</td>
+        <td>95</td>
+        <td>100</td>
+        <td>105</td>
+   </tr>
+   <tr>
+        <td>7</td>
+        <td>David Lee</td>
+        <td>BCA</td>
+        <td>80</td>
+        <td>85</td>
+        <td>90</td>
+   </tr>
+   <tr>
+        <td>8</td>
+        <td>Jessica Taylor</td>
+        <td>BCA</td>
+        <td>75</td>
+        <td>80</td>
+        <td>85</td>
+   </tr>
+   <tr>
+        <td>9</td>
+        <td>Daniel Anderson</td>
+        <td>BCA</td>
+        <td>90</td>
+        <td>95</td>
+        <td>100</td>
+   </tr>
+   <tr>
+        <td>10</td>
+        <td>Olivia Martinez</td>
+        <td>BCA</td>
+        <td>85</td>
+        <td>90</td>
+        <td>95</td>
+   </tr>
+</table>
+
+<span>
+    <p class="col"id="col">
+        The above table displays the details of 10 students enrolled in a BCA course,
+        including their id, name, and marks obtained in three subjects. 
+        The first row is highlighted with a different background color to distinguish the header from the rest of the data.
+        Additionally, every even row has a gray background for better readability, while the odd rows have a light gray background.
+        The last column of each row is bolded to emphasize the marks obtained by each student.
+    </p>
+</span>
+    
+</body>
+</html>

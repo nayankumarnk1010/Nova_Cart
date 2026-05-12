@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <script src="https://fontawesome.com" crossorigin="anonymous"></script>
+    <style>
+        nav > ul {
+            display:grid;
+            grid-template-columns: repeat(8, 1fr);
+            background-color: gray;
+            padding: 10px;
+            justify-content: space-evenly;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        .hidden {
+            padding: 10px;
+            background-color: lightgray;
+            display: inline-block;
+            display: none;
+        }
+        @media (max-width: 600px) {
+            nav > ul {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+        }
+  
+        @media (max-width: 400px) {
+            .hidden {
+                display: inline-block;
+                position: absolute;
+            }
+            /* nav > ul.hidden {
+                display: none;
+            } */
+             /* nav > ul {
+                grid-template-columns: repeat(1, 1fr);
+                display: inline-block;
+                top: 0;
+                left: 0;
+            } */
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+      <div><i class="fa-solid fa-bars"></i></div>
+    <nav>
+        <div>
+
+        </div>
+        <ul type="none">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Blog">Blog</a></li>
+            <li><a href="#Course">Course</a></li>
+            <li><a href="#Internship">Internship</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#About Us">About Us</a></li>
+            <li><a href="#Contact Us">Contact Us</a></li>
+        </ul>
+    </nav>
+    </section>
+
+</body>
+
+</html>

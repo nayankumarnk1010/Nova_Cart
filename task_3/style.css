@@ -1,0 +1,53 @@
+.div1{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 4px dashed black;
+    background: linear-gradient(pink, white, lightblue);
+    text-align: center;
+    line-height: 200px;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.div2{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 4px dashed black;
+    background: linear-gradient(rgb(63, 43, 240), white, rgb(235, 7, 204));
+    text-align: center;
+    line-height: 200px;
+    animation-name: movement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+        transform: translate(500px, 0px) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(1150px, 0px) rotate(360deg);
+    }
+}
+@keyframes movement {
+    0% {
+        transform: translate(1150px, 0px) rotate(0deg);
+    }
+    50% {
+        transform: translate(500px, 0px) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(360deg);
+    }
+}

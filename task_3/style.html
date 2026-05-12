@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent > p{
+        color: rgb(31, 17, 228);
+       }
+       .btn.primary {
+        background-color: rgb(31, 17, 228);
+        color: white;
+       }
+       li:first-child{
+        color: rgb(31, 17, 228);
+       }
+       li:last-child{
+        color: rgb(228, 17, 87);
+       }
+         .card1{
+          background-color: rgb(213, 210, 253);
+          color: rgb(63, 62, 62);
+          width: 200px;
+          height: 100px;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid rgb(63, 62, 62);
+          margin-left:10px;
+          display: inline-block;
+         }
+        .card2{
+          background-color: rgb(213, 210, 253);
+          color: rgb(63, 62, 62);
+          width: 200px;
+          height: 100px;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid rgb(63, 62, 62);
+          margin-left:10px;
+          display: inline-block;
+         }
+         .card3{
+          background-color: rgb(213, 210, 253);
+          color: rgb(63, 62, 62);
+          width: 600px;
+          height: 100px;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid rgb(63, 62, 62);
+          margin-left:10px;
+          display: inline-block;
+          overflow: scroll;
+         }
+            .card4{
+            background-color: rgb(213, 210, 253);
+            color: rgb(63, 62, 62);
+            width: 600px;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(63, 62, 62);
+            margin-left:10px;
+            display: inline-block;
+            overflow: hidden;
+            }
+         a[target="_blank"]{
+            border: 2px solid rgb(31, 17, 228);
+         }
+         button{
+            padding: 10px 20px;
+            margin: 5px;
+         }
+         .span1{
+            display: inline-block;
+            width: 500px;
+            height: 200px;
+            text-align: center;
+            margin: 10px;
+            padding: 50px;
+            border:5px;
+            background-color: rgb(213, 210, 253);
+            border: 1px solid rgb(63, 62, 62);
+            box-sizing: content-box;
+         }  
+         .span2{
+           display: inline-block;
+            width: 500px;
+            height: 200px;
+            text-align: center;
+            margin: 10px;
+            padding: 50px;
+            border:5px;
+            background-color: rgb(213, 210, 253);
+            border: 1px solid rgb(63, 62, 62);
+            box-sizing: border-box;
+         }
+        nav {
+            background-color: #444;
+            position:sticky;
+            top: 0px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #969494;
+        }
+    </style>
+</head>
+<body>
+
+
+        <nav>
+        <ul type="none">
+            <li><a href="#" >Home</a></li>
+            <li><a href="#" >About</a></li>
+            <li><a href="#" >Services</a></li>
+            <li><a href="#" >Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="parent">
+        <p>Text1</p>
+        <div>
+            <p>Text2</p>
+        </div>
+    </div>
+    <button class="btn primary">Click</button>
+<section>
+    <ol>
+        <li>Item1</li>
+        <li>Item2</li>      
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+    </ol>
+</section>
+
+<section class="card1">
+    <h3>My Card1</h3>
+    <p>This is a card description</p>
+</section>
+<section class="card2">
+    <h3>My Card2</h3>
+    <p>This is a card description</p>
+</section>
+<section style="margin-left: 10px;margin-top: 20px;">
+    <a href="#" target="_blank">Home</a>
+    <a href="#" target="_parent">About</a>
+    <a href="#" target="_blank">Services</a>
+    <a href="#" target="_self">Contact</a>
+</section>
+<section style="margin-left: 10px;margin-top: 20px;">
+    <button>Login</button>
+    <button>Signup</button>
+</section>
+
+<section style="margin-left: 10px; margin-top: 20px;">
+    <h2>Content Box and Border Box</h2>
+    <span class="span1">
+        <p>Content Box</p>
+    </span>
+    <span class="span2">
+        <p>Border Box</p>
+    </span>
+</section>
+
+<section style="margin-left: 10px;margin-top: 20px;">
+    <div style="margin:0 auto;width:50%;">
+      <h2>Hidden and Scroll</h2>
+    </div>
+</section>
+<section style="margin-left: 10px;margin-top: 20px;">
+    <section class="card3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.</p>
+    </section>
+</section>
+<section style="margin-left: 10px;margin-top: 20px;">
+    <section class="card4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.</p>
+    </section>
+</section>
+<section style="margin-left: 10px;margin-top: 20px; position: relative;">
+        <p style="position: absolute;top: 0%;right: 0%;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.
+            </p>
+        <p style="position: absolute;top: 0%;right: 0%;">
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Voluptatem adipisci, iure facere illo dignissimos tenetur error officia,
+              dolorum, quis tempora reprehenderit aliquid consectetur. Quod vitae dolore, veniam vero totam modi.
+            </p>    
+</section>
+<button style="bottom: 0%;right: 0%; position: fixed;" >Click Me</button>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Tasks</title>
+
+<style>
+    body {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .box {
+        border: 1px solid white;
+        padding: 15px;
+        margin: 15px auto;
+        width: 300px;
+        border-radius: 10px;
+    }
+
+    input, button {
+        padding: 8px;
+        margin: 5px;
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>JavaScript Mini Applications</h2>
+
+<!-- 6. Add Two Numbers -->
+<div class="box">
+    <h3>Add Two Numbers</h3>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br>
+    <button onclick="addNumbers()">Add</button>
+    <p id="sumResult"></p>
+</div>
+
+<!-- 7. Even or Odd -->
+<div class="box">
+    <h3>Even or Odd Checker</h3>
+    <input type="number" id="checkNum" placeholder="Enter number">
+    <br>
+    <button onclick="checkEvenOdd()">Check</button>
+    <p id="evenOddResult"></p>
+</div>
+
+<!-- 8. Change Background -->
+<div class="box">
+    <h3>Change Background Color</h3>
+    <button onclick="changeColor()">Change Color</button>
+</div>
+
+<!-- 9. Show/Hide Password -->
+<div class="box">
+    <h3>Show / Hide Password</h3>
+    <input type="password" id="password">
+    <br>
+    <button onclick="togglePassword()">Show / Hide</button>
+</div>
+
+<!-- 10. Grade Calculator -->
+<div class="box">
+    <h3>Marks Grade Calculator</h3>
+    <input type="number" id="marks" placeholder="Enter marks">
+    <br>
+    <button onclick="calculateGrade()">Calculate</button>
+    <p id="gradeResult"></p>
+</div>
+
+<script>
+    // 6. Add Two Numbers
+    function addNumbers() {
+        let a = Number(document.getElementById("num1").value);
+        let b = Number(document.getElementById("num2").value);
+        document.getElementById("sumResult").innerText = "Sum: " + (a + b);
+    }
+
+    // 7. Even or Odd
+    function checkEvenOdd() {
+        let num = Number(document.getElementById("checkNum").value);
+        let result = (num % 2 === 0) ? "Even" : "Odd";
+        document.getElementById("evenOddResult").innerText = result;
+    }
+
+    // 8. Change Background Color
+    function changeColor() {
+        let colors = ["lightblue", "lightgreen", "lightpink", "lightyellow"];
+        let randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.background = colors;
+    }
+
+    // 9. Show / Hide Password
+    function togglePassword() {
+        let pass = document.getElementById("password");
+        pass.type = (pass.type === "password") ? "text" : "password";
+    }
+
+    // 10. Grade Calculator
+    function calculateGrade() {
+        let marks = Number(document.getElementById("marks").value);
+        let grade = "";
+
+        if (marks >= 90) grade = "Grade A";
+        else if (marks >= 75) grade = "Grade B";
+        else if (marks >= 60) grade = "Grade C";
+        else if (marks >= 50) grade = "Grade D";
+        else grade = "Fail";
+
+        document.getElementById("gradeResult").innerText = grade;
+    }
+</script>
+
+</body>
+</html>

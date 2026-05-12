@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let randomNum = Math.floor(Math.random() * 100) + 1;
+let guess;
+
+do {
+    guess = parseInt(prompt("Guess the number (1–100):"));
+
+    if (guess < randomNum) {
+        alert("Too low!");
+    } else if (guess > randomNum) {
+        alert("Too high!");
+    } else {
+        alert("Correct!");
+    }
+
+} while (guess !== randomNum);
+</script>
+</body>
+</html>

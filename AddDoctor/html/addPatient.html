@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patients</title>
+    <link rel="stylesheet" href="../css/patient.css">
+</head>
+
+<body>
+
+<form action="#">
+
+    <h1>Patient Registration Form</h1>
+
+    <fieldset>
+        <legend><h2>Personal Information</h2></legend>
+
+        <div>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div>
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" readonly>
+        </div>
+
+        <div>
+            <label for="bloodgroup">Blood Group:</label>
+            <select id="bloodgroup" name="bloodgroup" required>
+                <option value="">Select</option>
+                <option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option>
+                <option>O+</option><option>O-</option>
+                <option>AB+</option><option>AB-</option>
+            </select>
+        </div>
+
+        <div class="group-row">
+            <label>Gender:</label><br>
+            <div><input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label></div>
+            
+            <div>
+                <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            </div>
+            <div>
+                <input type="radio" id="others" name="gender" value="others">
+            <label for="others">Others</label>
+            </div>
+
+            
+        </div>
+
+        <div>
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend><h2>Contact Information</h2></legend>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        </div>
+
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        </div>
+
+        <div>
+            <label for="emergency">Emergency Contact:</label>
+            <input type="tel" id="emergency" name="emergency" pattern="[0-9]{10}" required>
+        </div>
+
+        <div>
+            <label for="zip">Zip Code:</label>
+            <input type="tel" id="zip" name="zip" pattern="[0-9]{6}" required>
+        </div>
+
+        <div>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+        </div>
+
+        <div>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state">
+        </div>
+
+        <div style="grid-column: span 2;">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+        </div>
+
+    </fieldset>
+
+    <fieldset>
+        <legend><h2>Medical Information</h2></legend>
+
+        
+            <label>Conditions:</label><br>
+            <label for="diabetes">Diabetes</label>
+            <input type="checkbox" id="diabetes" name="condition">
+            
+            <label for="bp">BP</label>
+            <input type="checkbox" id="bp" name="condition">
+            
+            <label for="heart">Heart Disease</label>
+
+            <input type="checkbox" id="heart" name="condition">
+        
+
+        <div>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height">
+        </div>
+
+        <div>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight">
+        </div>
+
+        <div style="grid-column: span 2;">
+            <label for="allergies">Allergies:</label>
+            <textarea id="allergies" name="allergies"></textarea>
+        </div>
+
+        <div style="grid-column: span 2;">
+            <label for="medications">Medications:</label>
+            <textarea id="medications" name="medications"></textarea>
+        </div>
+
+    </fieldset>
+
+    <fieldset>
+        <legend><h2>Admission</h2></legend>
+
+        <div class="group-row">
+            <label>Admission Type:</label><br>
+
+            <input type="radio" id="opd" name="admission">
+            <label for="opd">OPD</label>
+
+            <input type="radio" id="emergency_ad" name="admission">
+            <label for="emergency_ad">Emergency</label>
+
+            <input type="radio" id="general" name="admission">
+            <label for="general">General</label>
+        </div>
+
+        <div>
+            <label for="doctor">Doctor:</label>
+            <select id="doctor" name="doctor">
+                <option>Select</option>
+                <option>Dr. Alice</option>
+                <option>Dr. Bob</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="department">Department:</label>
+            <select id="department" name="department">
+                <option>Select</option>
+                <option>Cardiology</option>
+                <option>Orthopedics</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="appointment">Appointment:</label>
+            <input type="datetime-local" id="appointment" name="appointment">
+        </div>
+
+        <div class="group-row">
+            <label>Room Required:</label><br>
+
+            <input type="radio" id="room_yes" name="room">
+            <label for="room_yes">Yes</label>
+
+            <input type="radio" id="room_no" name="room">
+            <label for="room_no">No</label>
+        </div>
+
+    </fieldset>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .section {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            margin-top: 10px;
+            box-sizing: border-box;
+            gap: 10px; 
+            margin-left: 10px;
+            max-width: 100%;
+            justify-content: center;
+        }
+
+        .cards {
+            background-color: none;
+            width: 220px;
+            border: 2px solid rgb(56, 55, 55);
+            border-radius: 10px;
+        }
+
+        .cards:hover {
+            transform: scale(1.1, 1.1);
+            transition-duration: 0.5s;
+            box-shadow: 5px 5px 0px 0px gray;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+
+        p,
+        button {
+            margin: 3px;
+            border-radius: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            cursor: pointer;
+        }
+
+        @media (max-width:1020px) {
+            .section {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width:760px) {
+            .section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width:320px) {
+            .section {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        } 
+
+
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <div class="cards">
+            <img src="../images/BMW3seriesLWB.png" alt="BMW">
+            <hr>
+            <p><b>BMW 3 Series LWB</b></p>
+            <p>Price: 63.50 Lakh </p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <img src="../images/MercedesBenzGClass.png" alt="Mercedes">
+            <hr>
+            <p><b>Mercedes Benz G-Class</b></p>
+            <p>Price: 2.90 Crore </p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <img src="../images/MGCyberster.png" alt="MG Cyberster">
+            <hr>
+            <p><b>MG Cyberster</b></p>
+            <p>Price: 77.50 Lakh</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <img src="../images/MercedesBenzAmgCLE.png" alt="anime">
+            <hr>
+            <p><b>Mercedes Benz AMG CLE</b></p>
+            <p>Price: 1.33 Crore</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <img src="../images/TataSierra.png" alt="anime">
+            <hr>
+            <p><b>Tata Sierra</b></p>
+            <p>Price: 21.29 Lakh </p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="cards">
+            <img src="../images/LandRoverDefender.avif" alt="anime">
+            <hr>
+            <p><b>Land Rover Defender</b></p>
+            <p>Price: 2.62 Crore</p>
+            <button>Add to Cart</button>
+        </div>
+    </section> 
+
+
+
+</body>
+
+</html>

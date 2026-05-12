@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css task</title>
+    <style>
+        input{
+            background-color: rgb(241, 232, 232);
+        }
+        input[type="text"]{
+                background-color: rgb(255, 207, 207);
+        }
+        input[type="email"]:focus{
+            border:5px solid red;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <form action="#">
+        <fieldset>
+            <legend>Registration Form</legend>
+            <label for="name">Name : </label>
+            <input type="text" name="name" id="name" placeholder="Enter your Name"><br><br>
+            <label for="email">Email : </label>
+            <input type="email" name="email" id="email" placeholder="Enter your Email"><br><br>
+            <label for="age">Age : </label>
+            <input type="number" name="age" id="age" max="100" min="18" placeholder="0"><br><br>
+            <label for="dob">DOB :</label>
+            <input type="date"><br><br>
+
+            <h4>Select Gender </h4>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male" required><br><br>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female" required><br><br>
+            <label for="others">Others</label>
+            <input type="radio" name="gender" id="others" value="others" required><br><br>
+
+            <h4>Hobbies</h4>
+            <label for="cbox">Reading</label>
+            <input type="checkbox" name="hobbies" id="cbox" value="reading"><br><br>
+            <label for="cbox1">Travelling</label>   
+            <input type="checkbox" name="hobbies" id="cbox1" value="travelling"><br><br>
+            <label for="cbox2">Cooking</label>
+            <input type="checkbox" name="hobbies" id="cbox2" value="cooking"><br><br>
+            <label for="cbox3">Drawing</label>
+            <input type="checkbox" name="hobbies" id="cbox3" value="drawing"><br><br>
+
+
+            <label for="country">Select Country :</label>
+            <select name="country" id="country">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+            </select><br><br>
+            <label for="pass">Password : </label>
+            <input type="password" name="pass" id="pass" placeholder="Enter Passward"><br><br>
+            <label for="cpass"> Confirm Password : </label>
+            <input type="password" name="cpass" id="cpass" placeholder="Enter Passward"><br><br>
+            <input type="submit">
+        </fieldset>
+    </form>
+</section>   
+</body>
+</html>
